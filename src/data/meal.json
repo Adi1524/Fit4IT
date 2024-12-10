@@ -1,0 +1,62 @@
+{
+  "1500kcal": {
+    "breakfast": {
+      "item": "Oatmeal with almond butter",
+      "quantity": "40g oats, 15g almond butter",
+      "protein": "6g",
+      "carbs": "30g",
+      "fats": "14g"
+    },
+    "lunch": {
+      "item": "Cooked Rice with Sambar and Veg Curry",
+      "quantity": "100g rice, 200g sambar, 150g veggie curry",
+      "protein": "15g",
+      "carbs": "60g",
+      "fats": "12g"
+    },
+    "dinner": {
+      "item": "Chapati with Vegetable Curry and Tofu",
+      "quantity": "2 chapatis, 200g vegetable curry, 100g tofu",
+      "protein": "20g",
+      "carbs": "40g",
+      "fats": "15g"
+    },
+    "snack": {
+      "item": "Greek yogurt with nuts",
+      "quantity": "100g yogurt, 15g nuts",
+      "protein": "10g",
+      "carbs": "15g",
+      "fats": "7g"
+    }
+  },
+  "1800kcal": {
+    "breakfast": {
+      "item": "Scrambled eggs with spinach",
+      "quantity": "3 eggs, 50g spinach",
+      "protein": "20g",
+      "carbs": "5g",
+      "fats": "15g"
+    },
+    "lunch": {
+      "item": "Cooked Rice with Sambar and Chicken Curry",
+      "quantity": "100g rice, 200g sambar, 150g chicken curry",
+      "protein": "30g",
+      "carbs": "60g",
+      "fats": "18g"
+    },
+    "dinner": {
+      "item": "Chapati with Vegetable Curry and Paneer",
+      "quantity": "2 chapatis, 200g vegetable curry, 100g paneer",
+      "protein": "25g",
+      "carbs": "40g",
+      "fats": "20g"
+    },
+    "snack": {
+      "item": "Mixed nuts",
+      "quantity": "30g nuts",
+      "protein": "7g",
+      "carbs": "10g",
+      "fats": "15g"
+    }
+  }
+}
