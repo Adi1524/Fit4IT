@@ -1,0 +1,228 @@
+{
+  "veg": {
+    "breakfast": {
+      "bread": {
+        "item": "Bread with Peanut Butter",
+        "quantity": {
+          "bread": "2 slices",
+          "peanutButter": "15g"
+        },
+        "protein": 10,
+        "carbs": 30,
+        "fats": 12,
+        "calories": 250
+      },
+      "idli": {
+        "item": "Idli with Sambar",
+        "quantity": {
+          "idli": "4 idlis",
+          "sambar": "100g"
+        },
+        "protein": 8,
+        "carbs": 35,
+        "fats": 5,
+        "calories": 220
+      }
+    },
+    "lunch": {
+      "rice": {
+        "item": "Rice with Dal",
+        "quantity": {
+          "rice": "100g",
+          "dal": "150g"
+        },
+        "protein": 15,
+        "carbs": 50,
+        "fats": 8,
+        "calories": 400
+      },
+      "quinoa": {
+        "item": "Quinoa with Veg Curry",
+        "quantity": {
+          "quinoa": "120g",
+          "vegCurry": "200g"
+        },
+        "protein": 20,
+        "carbs": 45,
+        "fats": 7,
+        "calories": 500
+      }
+    },
+    "dinner": {
+      "chapati": {
+        "item": "Chapati with Paneer Bhurji",
+        "quantity": {
+          "chapati": "2 chapatis",
+          "paneerBhurji": "200g"
+        },
+        "protein": 25,
+        "carbs": 40,
+        "fats": 10,
+        "calories": 500
+      },
+      "millet": {
+        "item": "Millet Roti with Veg Curry",
+        "quantity": {
+          "milletRoti": "2 millet rotis",
+          "vegCurry": "200g"
+        },
+        "protein": 18,
+        "carbs": 35,
+        "fats": 6,
+        "calories": 450
+      }
+    }
+  },
+  "nonVeg": {
+    "breakfast": {
+      "eggs": {
+        "item": "Scrambled Eggs with Spinach",
+        "quantity": {
+          "eggs": "3",
+          "spinach": "50g"
+        },
+        "protein": 20,
+        "carbs": 5,
+        "fats": 15,
+        "calories": 350
+      },
+      "chickenSandwich": {
+        "item": "Chicken Sandwich",
+        "quantity": {
+          "bread": "2 slices",
+          "chicken": "100g",
+          "mayo": "20g"
+        },
+        "protein": 25,
+        "carbs": 30,
+        "fats": 10,
+        "calories": 400
+      }
+    },
+    "lunch": {
+      "rice": {
+        "item": "Rice with Chicken Curry",
+        "quantity": {
+          "rice": "100g",
+          "chickenCurry": "200g"
+        },
+        "protein": 30,
+        "carbs": 50,
+        "fats": 12,
+        "calories": 600
+      },
+      "brownRice": {
+        "item": "Brown Rice with Fish Curry",
+        "quantity": {
+          "brownRice": "100g",
+          "fishCurry": "150g"
+        },
+        "protein": 25,
+        "carbs": 45,
+        "fats": 10,
+        "calories": 550
+      }
+    },
+    "dinner": {
+      "chapati": {
+        "item": "Chapati with Grilled Chicken",
+        "quantity": {
+          "chapati": "2 chapatis",
+          "grilledChicken": "150g"
+        },
+        "protein": 28,
+        "carbs": 35,
+        "fats": 8,
+        "calories": 500
+      },
+      "millet": {
+        "item": "Millet Roti with Fish Curry",
+        "quantity": {
+          "milletRoti": "2 millet rotis",
+          "fishCurry": "200g"
+        },
+        "protein": 22,
+        "carbs": 40,
+        "fats": 6,
+        "calories": 480
+      }
+    }
+  },
+  "eggetarian": {
+    "breakfast": {
+      "omelette": {
+        "item": "Omelette with Veggies",
+        "quantity": {
+          "eggs": "3",
+          "veggies": "100g"
+        },
+        "protein": 18,
+        "carbs": 10,
+        "fats": 12,
+        "calories": 300
+      },
+      "bread": {
+        "item": "Bread with Boiled Egg",
+        "quantity": {
+          "bread": "2 slices",
+          "boiledEgg": "1"
+        },
+        "protein": 15,
+        "carbs": 25,
+        "fats": 8,
+        "calories": 250
+      }
+    },
+    "lunch": {
+      "rice": {
+        "item": "Rice with Egg Curry",
+        "quantity": {
+          "rice": "100g",
+          "eggs": "2",
+          "curry": "150g"
+        },
+        "protein": 20,
+        "carbs": 50,
+        "fats": 10,
+        "calories": 500
+      },
+      "quinoa": {
+        "item": "Quinoa with Egg Stir-fry",
+        "quantity": {
+          "quinoa": "120g",
+          "eggs": "2",
+          "stirFriedVeggies": "100g"
+        },
+        "protein": 25,
+        "carbs": 45,
+        "fats": 7,
+        "calories": 550
+      }
+    },
+    "dinner": {
+      "chapati": {
+        "item": "Chapati with Egg Bhurji",
+        "quantity": {
+          "chapati": "2 chapatis",
+          "eggs": "2"
+        },
+        "protein": 18,
+        "carbs": 35,
+        "fats": 8,
+        "calories": 400
+      },
+      "millet": {
+        "item": "Millet Roti with Egg Curry",
+        "quantity": {
+          "milletRoti": "2 millet rotis",
+          "eggs": "2",
+          "curry": "150g"
+        },
+        "protein": 20,
+        "carbs": 40,
+        "fats": 9,
+        "calories": 450
+      }
+    }
+  }
+}
