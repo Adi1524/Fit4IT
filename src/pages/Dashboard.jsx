@@ -12,6 +12,10 @@ const Dashboard = () => {
     (store) => store.userDetails.mealsCompleted
   );
 
+  const workoutPlan = useSelector((store) => store.userWorkout);
+
+  console.log("workoutplan did it get set", workoutPlan);
+
   const mealCalories = mealPlan?.totalCalories ? mealPlan?.totalCalories : 0;
   const mealMacros = mealPlan?.totalMacros ? mealPlan?.totalMacros : 0;
 
@@ -36,7 +40,6 @@ const Dashboard = () => {
     }
   }, [userDetails?.mealsCompleted]);
 
-  console.log("newplasdlkajs", mealPlan, calories);
   return (
     <div className="h-screen bg-[#ededed] flex ">
       <div className="bg-white w-[70%] h-screen overflow-y-auto hide-scrollbar pr-4 ml-[2px] pt-4 pl-2">

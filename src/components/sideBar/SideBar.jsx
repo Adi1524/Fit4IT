@@ -1,68 +1,127 @@
-import { Bell, Grid, LogOut, Settings } from "lucide-react";
+import { Grid, LogOut, Settings, Target } from "lucide-react";
+import { FaDumbbell } from "react-icons/fa";
 import { GrDocumentDownload } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const menuItems = [
   {
     index: 0,
     name: "Dashboard",
     path: "/dashboard",
-    icon: <Grid size={12} />,
+    icon: <Grid size={18} />,
   },
   {
     index: 1,
     name: "Fitness Program",
     path: "/dashboard/program",
-    icon: <GrDocumentDownload size={12} />,
+    icon: <GrDocumentDownload size={18} />,
   },
-  // { index: 2, name: "Workout", path: "/workouts", icon: <List size={12} /> },
-  {
-    index: 3,
-    name: "Notifications",
-    path: "/notifications",
-    icon: <Bell size={12} />,
-  },
+  // {
+  //   index: 3,
+  //   name: "Notifications",
+  //   path: "/notifications",
+  //   icon: <Bell size={18} />,
+  // },
 ];
 
 const SideBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const handleClick = (path) => {
     navigate(`${path}`);
   };
 
-  return (
-    <div className="w-[15%]  h-screen px-5 justify-between flex flex-col  ">
-      <div className=" ">
-        <p className="font-semibold mt-4 mb-6 ">SouthFit</p>
+  const handleSettingsClick = () => {
+    // Add your settings navigation logic here
+    console.log("Settings clicked");
+  };
 
-        <div>
-          {menuItems.map((item, i) => {
+  const handleLogoutClick = () => {
+    // Add your logout logic here
+    console.log("Logout clicked");
+  };
+
+  const handleTrackGoalsClick = () => {
+    // Add your track goals logic here
+    console.log("Track Goals clicked");
+  };
+
+  return (
+    <div
+      className="w-[16%] h-screen bg-white border-r border-slate-200 
+     flex flex-col justify-between"
+    >
+      {/* Header Section */}
+      <div className="px-4 py-6">
+        {/* Logo/Brand */}
+        <div className="flex items-center justify-center gap-3 mb-8 pb-4 border-b border-slate-200">
+          <FaDumbbell />
+          <h1 className="text-xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            SouthFit
+          </h1>
+        </div>
+
+        {/* Navigation Menu */}
+        <nav className="space-y-2">
+          {menuItems.map((item) => {
+            const isActive = location.pathname === item.path;
+
             return (
               <button
+                key={item.index}
                 type="button"
                 onClick={() => handleClick(item.path)}
-                key={i}
-                className="flex items-center mb-2 gap-2 cursor-pointer"
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-300 group ${
+                  isActive
+                    ? "bg-gradient-to-r from-[#dfe068]/20 to-[#c5cc5a]/20 border border-[#dfe068]/30 text-[#dfe068] "
+                    : "text-slate-600 hover:bg-primary/60 hover:text-white"
+                }`}
               >
-                <div>{item.icon}</div>
-                <p>{item?.name}</p>
+                <div
+                  className={`transition-colors duration-300 ${
+                    isActive
+                      ? "text-[#dfe068]"
+                      : "text-slate-500 group-hover:text-white"
+                  }`}
+                >
+                  {item.icon}
+                </div>
+                <span className="font-medium text-sm">{item.name}</span>
               </button>
             );
           })}
-        </div>
+        </nav>
       </div>
 
-      <div>
-        <button className="bg-[#dfe068] w-full py-2 rounded-full text-white font-semibold mb-2 ">
-          Track Goals
+      {/* Bottom Section */}
+      <div className="px-4 pb-6">
+        {/* Track Goals Button */}
+        <button
+          onClick={handleTrackGoalsClick}
+          className="w-full bg-gradient-to-r from-[#dfe068] to-[#c5cc5a] hover:from-[#c5cc5a] hover:to-[#b8b84d] text-slate-900 font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 mb-4"
+        >
+          <Target className="w-5 h-5" />
+          <span className="text-sm">Track Goals</span>
         </button>
-        <div className="flex items-center my-2 gap-2">
-          <Settings size={12} />
-          <p>Settings</p>
-        </div>
-        <div className="flex items-center mb-2 gap-2">
-          <LogOut size={12} />
-          <p>Log out</p>
+
+        {/* Settings and Logout */}
+        <div className=" border-t border-slate-200 pt-4">
+          <button
+            onClick={handleSettingsClick}
+            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-300 text-slate-500 hover:bg-slate-50 hover:text-slate-700 group"
+          >
+            <Settings className="w-5 h-5 transition-colors duration-300 group-hover:text-slate-700" />
+            <span className="font-medium">Settings</span>
+          </button>
+
+          <button
+            onClick={handleLogoutClick}
+            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-300 text-slate-500 hover:bg-slate-50 hover:text-slate-700 group"
+          >
+            <LogOut className="w-5 h-5 transition-colors duration-300 group-hover:text-slate-700" />
+            <span className="font-medium">Log out</span>
+          </button>
         </div>
       </div>
     </div>

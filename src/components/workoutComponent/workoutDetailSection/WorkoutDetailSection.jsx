@@ -2,56 +2,58 @@ import { Alert } from "antd";
 import { Fullscreen } from "lucide-react";
 import { useState } from "react";
 import { FaAngleLeft, FaPlay } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const WorkoutDetailSection = () => {
-  const [youtubeUrl, setYoutubeUrl] = useState("UIPvIYsjfpo");
+  const selectedWorkout = useSelector(
+    (store) => store.userWorkout.selectedWorkout.workout
+  );
+
+  const [youtubeUrl, setYoutubeUrl] = useState(
+    selectedWorkout?.details?.exercises[0]?.videoLink
+  );
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const selectedWorkout = useSelector(
-  //   (state) => state.userWorkout.selectedWorkout
-  // );
-
-  // console.log("selectedWorkout", selectedWorkout);
-
-  const selectedWorkout = {
-    name: "Low Impact Full Body Starter",
-    category: "beginner",
-    duration: "10 minutes",
-    type: "HIIT Circuit",
-    details: {
-      exercises: [
-        {
-          name: "March in Place",
-          duration: "40s",
-          videoLink: "u1gmWFvEluM",
-        },
-        {
-          name: "Wall Push-ups",
-          duration: "40s",
-          videoLink: "YB0egDzsu18",
-        },
-        {
-          name: "Standing Oblique Crunch",
-          duration: "40s",
-          videoLink: "yZmq_xSkhI0?si",
-        },
-        {
-          name: "Bodyweight Squats",
-          duration: "40s",
-          videoLink: "8uoaYwS6iFM?si",
-        },
-        {
-          name: "Arm Circles Forward & Back",
-          duration: "40s",
-          videoLink: "UVMEnIaY8aU?si",
-        },
-      ],
-      restBetweenExercises: "20s",
-      rounds: 2,
-    },
-  };
+  console.log("workoutlink", selectedWorkout?.details?.exercises[0]?.videoLink);
+  // const selectedWorkout = {
+  //   name: "Low Impact Full Body Starter",
+  //   category: "beginner",
+  //   duration: "10 minutes",
+  //   type: "HIIT Circuit",
+  //   details: {
+  //     exercises: [
+  //       {
+  //         name: "March in Place",
+  //         duration: "40s",
+  //         videoLink: "u1gmWFvEluM",
+  //       },
+  //       {
+  //         name: "Wall Push-ups",
+  //         duration: "40s",
+  //         videoLink: "YB0egDzsu18",
+  //       },
+  //       {
+  //         name: "Standing Oblique Crunch",
+  //         duration: "40s",
+  //         videoLink: "yZmq_xSkhI0?si",
+  //       },
+  //       {
+  //         name: "Bodyweight Squats",
+  //         duration: "40s",
+  //         videoLink: "8uoaYwS6iFM?si",
+  //       },
+  //       {
+  //         name: "Arm Circles Forward & Back",
+  //         duration: "40s",
+  //         videoLink: "UVMEnIaY8aU?si",
+  //       },
+  //     ],
+  //     restBetweenExercises: "20s",
+  //     rounds: 2,
+  //   },
+  // };
 
   return (
     <div className="h-screen flex flex-col">
@@ -90,10 +92,10 @@ const WorkoutDetailSection = () => {
             showIcon
           />
         </div>
-        <div className="pb-4">
+        <div className="bg-gray-100 pb-4">
           {new Array(selectedWorkout.details.rounds).fill(0).map((_, i) => {
             return (
-              <div key={i} className="bg-gray-100  px-4 pt-4">
+              <div key={i} className="  px-4 pt-4">
                 <p className="font-semibold mb-3">Round {i + 1}</p>
 
                 {selectedWorkout?.details?.exercises.map((workout, i) => {
@@ -126,6 +128,14 @@ const WorkoutDetailSection = () => {
               </div>
             );
           })}
+          <div className="px-4 flex justify-end pt-6">
+            <button
+              type="text"
+              className="text-white bg-primary font-bold text-md px-2 py-1 rounded-md "
+            >
+              Mark as completed!!!
+            </button>
+          </div>
         </div>
       </div>
     </div>

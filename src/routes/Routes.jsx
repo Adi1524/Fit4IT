@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import CustomMeditation from "../components/CustomMeditation/CustomMeditation";
 import MeditationTrack from "../components/MeditationTrack";
 import RecipeCard from "../components/RecipeCard";
 import WorkoutDetailSection from "../components/workoutComponent/workoutDetailSection/WorkoutDetailSection";
@@ -62,6 +63,7 @@ const appRouter = createBrowserRouter([
         path: "program",
         element: <FitnessProgram />,
       },
+      { path: "meditation", element: <CustomMeditation /> },
     ],
   },
 ]);

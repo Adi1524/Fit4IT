@@ -3,8 +3,11 @@ import { FaDumbbell } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import mealData from "../../data/dynamicMeal.json";
+import workoutData from "../../data/hiitWorkout.json";
+import stretchesData from "../../data/stretches.json";
 import { setMealPlanRedux } from "../../redux/slice/mealPlanSlice";
 import { setUserDetails } from "../../redux/slice/userDetailsSlice";
+import { setSelectedWorkout } from "../../redux/slice/userWorkoutSlice";
 import UserInfoPage1 from "./userInfo/UserInfoPage1";
 import UserInfoPage2 from "./userInfo/UserInfoPage2";
 import UserInfoPage3 from "./userInfo/UserInfoPage3";
@@ -74,8 +77,35 @@ const UserDetails = () => {
 
     const mealPlanResult = generateMealPlan(userMacros, mealData); //meal type is required here
     console.log("did we get the meal?", mealPlanResult);
+    generateWorkoutPlan(userDetails);
+
     dispatch(setMealPlanRedux({ ...mealPlanResult }));
     navigate("/dashboard");
+  };
+
+  const generateWorkoutPlan = (userDetails) => {
+    const { workoutExperience } = userDetails;
+
+    const filterWorkout = workoutData?.home.filter(
+      (workout) => workout.category === workoutExperience
+    );
+
+    const selectedWorkout =
+      filterWorkout[Math.floor(Math.random() * filterWorkout.length)];
+
+    const filteredStretched = stretchesData.filter(
+      (stretch) => stretch.category === workoutExperience
+    );
+
+    const seletedStretches =
+      filteredStretched[Math.floor(Math.random() * filteredStretched.length)];
+
+    dispatch(
+      setSelectedWorkout({
+        workout: { ...selectedWorkout },
+        stretches: { ...seletedStretches },
+      })
+    );
   };
 
   const generateMealPlan = (userMacros, mealData, mealType) => {

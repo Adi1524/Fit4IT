@@ -13,13 +13,6 @@ const MealPlanPage = () => {
     (store) => store.userDetails.mealsCompleted
   );
 
-  // const [mealsCompleted, setMealsCompleted] = useState({
-  //   BREAKFAST: false,
-  //   LUNCH: false,
-  //   DINNER: false,
-  //   SNACKS: false,
-  // });
-
   return (
     <div className=" bg-slate-400 w-full ">
       {mealPlan ? (

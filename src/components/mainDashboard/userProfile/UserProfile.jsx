@@ -21,7 +21,9 @@ const UserProfile = () => {
         </div>
 
         <p className="text-xl font-semibold">User Profile</p>
-        <p className="text-xs text-gray-500">Age 29, Fitness Enthusiat</p>
+        <p className="text-xs text-gray-500">
+          Age {userDetails?.age}, Fitness Enthusiat
+        </p>
 
         <div className="flex mt-6 gap-4 items-center">
           <div className="border-r text-xs border-gray-300 pr-3">
@@ -46,26 +48,26 @@ const UserProfile = () => {
       <Divider />
 
       <div>
-        <p className="text-md font-semibold">Upcoming</p>
+        <p className="text-md font-semibold">Fitness Routine</p>
         <div className="flex items-center gap-2 mt-4 ml-3">
           <div className="w-8 h-8 rounded-full bg-[#dfe068] flex items-center justify-center">
             <PiFlowerLotus color="white" />{" "}
           </div>
-          <p>Guided meditation</p>
+          <p className="text-sm">Home workout</p>
         </div>
 
         <div className="flex items-center gap-2 mt-4 ml-3">
           <div className="w-8 h-8 rounded-full bg-[#dfe068] flex items-center justify-center">
             <PiFlowerLotus color="white" />{" "}
           </div>
-          <p>Guided meditation</p>
+          <p className="text-sm">Meal plan </p>
         </div>
 
         <div className="flex items-center gap-2 mt-4 ml-3">
           <div className="w-8 h-8 rounded-full bg-[#dfe068] flex items-center justify-center">
             <PiFlowerLotus color="white" />{" "}
           </div>
-          <p>Guided meditation</p>
+          <p className="text-sm">Guided meditation</p>
         </div>
       </div>
     </div>
