@@ -1,6 +1,8 @@
 import { useState } from "react";
-import mealPlans from "../data/dynamicMeal.json";
-import MealCard from "./MealCard";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import mealData from "../data/dynamicMeal.json";
+import { setMealPlanRedux } from "../redux/slice/mealPlanSlice";
 
 export default function MealPlanForm() {
   const [formData, setFormData] = useState({
@@ -10,25 +12,32 @@ export default function MealPlanForm() {
     height: "",
     mealPreference: "",
     activityLevel: "sedentary",
-    breakfast: "",
-    lunch: "",
-    dinner: "",
   });
   const [calories, setCalories] = useState(null);
   const [mealPlan, setMealPlan] = useState(null);
-  // const [mealPlan, setMealPlan] = useState({
-  //   calories: "",
-  //   protein: "",
-  //   fats: "",
-  //   quantity: {},
-  // });
+  const dispatch = useDispatch();
 
-  // Update form data dynamically
+  const navigate = useNavigate();
+
+  const handleQuickMealGeneration = () => {
+    const roundedCalories = 1800;
+    const userMacros = {
+      calories: roundedCalories,
+      protein: Math.round((roundedCalories * 0.25) / 4), // 25% of calories from protein
+      carbs: Math.round((roundedCalories * 0.5) / 4), // 50% of calories from carbs
+      fats: Math.round((roundedCalories * 0.25) / 9), // 25% of calories from fats
+    };
+    const mealType = "veg";
+    const resultMealPlan = generateMealPlan(userMacros, mealData, mealType);
+    console.log("the result meal plan from quick generation", resultMealPlan);
+    setMealPlan(resultMealPlan);
+  };
+  // Handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Calculate Maintenance Calories and Deficit
+  // Calculate maintenance calories and deficit
   const calculateCalories = () => {
     const { age, gender, weight, height, activityLevel } = formData;
 
@@ -59,124 +68,161 @@ export default function MealPlanForm() {
         : maintenanceCalories - 300; // Subtract 300 for deficit
 
     const roundedCalories = Math.round(deficitCalories);
+    console.log("total rounded calories", roundedCalories);
     setCalories(roundedCalories);
-    const mealPlanResult = getClosestMealPlan(
-      roundedCalories,
-      formData.mealPreference
-    );
+
+    // Macro distribution (example percentages)
+    const userMacros = {
+      calories: roundedCalories,
+      protein: Math.round((roundedCalories * 0.25) / 4), // 25% of calories from protein
+      carbs: Math.round((roundedCalories * 0.5) / 4), // 50% of calories from carbs
+      fats: Math.round((roundedCalories * 0.25) / 9), // 25% of calories from fats
+    };
+
+    const mealPlanResult = generateMealPlan(userMacros, mealData); //meal type is required here
     setMealPlan(mealPlanResult);
-    console.log(
-      "after the meal plan has been selected it has been updated into the state",
-      mealPlan
-    );
   };
 
-  const getClosestMealPlan = (calories, mealPreference) => {
-    const plans = mealPlans[mealPreference];
-    console.log("this is the plan from getClostestMealPlan function", plans);
+  // Generate meal plan based on macros and updated meal data
+  const generateMealPlan = (userMacros, mealData, mealType) => {
+    const calorieDistribution = {
+      breakfast: 0.25,
+      lunch: 0.4,
+      dinner: 0.2,
+      snacks: 0.15,
+    };
 
-    if (!plans) {
-      console.error(`Meal plans for preference "${mealPreference}" not found.`);
-      return null;
-    }
+    const result = {};
+    let totalPlannedCalories = 0;
+    let totalProtein = 0;
+    let totalCarbs = 0;
+    let totalFats = 0;
 
-    const selectedPlan = {};
-    const targetCaloriesPerMeal = calories / 3; // Divide total calories into 3 meals
+    let selectedLunch = null;
 
-    // the keys here will be breakfast, lunch, dinner
-    Object.keys(plans).forEach((mealType) => {
-      console.log("this is inside another loop", plans[mealType]);
-      const meals = plans[mealType];
-      let closestMeal = null;
-      let closestDiff = Infinity;
+    Object.entries(calorieDistribution).forEach(([category, percentage]) => {
+      const maxCaloriesForCategory = userMacros.calories * percentage;
 
-      Object.keys(meals).forEach((mealKey) => {
-        console.log("this is inside another loop part-2", meals[mealKey]);
-        const meal = meals[mealKey];
-        const diff = Math.abs(meal.calories - targetCaloriesPerMeal);
-        if (diff < closestDiff) {
-          closestDiff = diff;
-          closestMeal = meal;
-        }
+      if (
+        !mealData.meals[category] ||
+        !Array.isArray(mealData.meals[category])
+      ) {
+        console.warn(`No valid meals found for category: ${category}`);
+        result[category] = {
+          meals: [],
+          totalCalories: 0,
+          totalMacros: { protein: 0, carbs: 0, fats: 0 },
+        };
+        return;
+      }
+
+      let categoryCalories = 0;
+      let categoryProtein = 0;
+      let categoryCarbs = 0;
+      let categoryFats = 0;
+
+      let mealOptions;
+      if (mealType === "veg") {
+        mealOptions = mealData.meals[category].filter(
+          (meal) => meal.type === mealType
+        );
+      } else {
+        mealOptions = mealData.meals[category];
+      }
+      console.log("give me all the categories", mealOptions);
+
+      if (category === "lunch" && !selectedLunch) {
+        selectedLunch =
+          mealOptions[Math.floor(Math.random() * mealOptions.length)];
+      }
+
+      let meal;
+      console.log("selectedMealProtein", selectedLunch);
+      if (category === "lunch" && selectedLunch) {
+        meal = selectedLunch;
+      } else if (selectedLunch?.protein === 1 && category === "dinner") {
+        meal = mealOptions.filter((meal) => meal.protein === 0)[0];
+      } else {
+        meal = mealOptions[Math.floor(Math.random() * mealOptions.length)];
+      }
+
+      const adjustedIngredients = meal.ingredients.map((ingredient) => {
+        console.log("maxCaloriesForCategory", maxCaloriesForCategory);
+        const adjustedCalories = Math.min(
+          maxCaloriesForCategory * ingredient.qualifier
+        );
+        const maxQuantity =
+          (adjustedCalories * 100) / ingredient.caloriesPer100g;
+        const adjustedProtein = (ingredient.protein / 100) * maxQuantity;
+        const adjustedCarbs = (ingredient.carbs / 100) * maxQuantity;
+        const adjustedFats = (ingredient.fats / 100) * maxQuantity;
+
+        categoryCalories += adjustedCalories;
+        categoryProtein += adjustedProtein;
+        categoryCarbs += adjustedCarbs;
+        categoryFats += adjustedFats;
+
+        return {
+          ingredient: ingredient.ingredient,
+          quantity: Math.round(maxQuantity),
+          calories: Math.round(adjustedCalories),
+          protein: adjustedProtein.toFixed(2),
+          carbs: adjustedCarbs.toFixed(2),
+          fats: adjustedFats.toFixed(2),
+        };
       });
 
-      if (closestMeal) {
-        console.log(
-          "we fucking found a closest meal plan(closestMeal)",
-          closestMeal
-        );
-        console.log(
-          "next iteration in closestMeal",
-          Object.entries(closestMeal.quantity)
-        );
+      result[category] = {
+        ...meal,
+        ingredients: adjustedIngredients,
+      };
 
-        const scaleFactor = targetCaloriesPerMeal / closestMeal.calories;
+      categoryCalories = Math.min(categoryCalories, maxCaloriesForCategory);
+      totalPlannedCalories += categoryCalories;
+      totalProtein += categoryProtein;
+      totalCarbs += categoryCarbs;
+      totalFats += categoryFats;
 
-        // Scale quantities
-        const scaledQuantity = Object.entries(closestMeal.quantity).reduce(
-          (scaled, [ingredient, baseQty]) => {
-            const [value, unit] = baseQty.match(/([\d.]+)(\D+)/).slice(1); // Extract number and unit
-            scaled[ingredient] = `${(parseFloat(value) * scaleFactor).toFixed(
-              1
-            )}${unit}`;
-            return scaled;
-          },
-          {}
-        );
-
-        console.log("scaled Quantity", scaledQuantity);
-
-        selectedPlan[mealType] = {
-          ...closestMeal,
-          protein: Math.round(closestMeal.protein * scaleFactor),
-          carbs: Math.round(closestMeal.carbs * scaleFactor),
-          fats: Math.round(closestMeal.fats * scaleFactor),
-          calories: Math.round(closestMeal.calories * scaleFactor),
-          quantity: scaledQuantity,
-        };
-      }
+      result[category].totalCalories = Math.round(categoryCalories);
+      result[category].totalMacros = {
+        protein: categoryProtein.toFixed(2),
+        carbs: categoryCarbs.toFixed(2),
+        fats: categoryFats.toFixed(2),
+      };
     });
 
-    console.log("ta-daaaa the final meal plan", selectedPlan);
-    return selectedPlan;
+    result.totalCalories = Math.round(totalPlannedCalories);
+    result.totalMacros = {
+      protein: totalProtein.toFixed(2),
+      carbs: totalCarbs.toFixed(2),
+      fats: totalFats.toFixed(2),
+    };
+
+    return result;
   };
 
-  // const getClosestMealPlan = (calories, mealPreference) => {
-  //   const plans = mealPlans[mealPreference];
-  //   const selectedPlan = {};
+  const handleMealPlan = () => {
+    dispatch(setMealPlanRedux({ ...mealPlan }));
 
-  //   // Iterate over meal types: breakfast, lunch, dinner
-  //   Object.keys(plans).forEach((mealType) => {
-  //     const meals = plans[mealType];
-  //     let closestMeal = null;
-  //     let closestDiff = Infinity;
-  //     console.log("hii");
-
-  //     Object.keys(meals).forEach((mealKey) => {
-  //       const meal = meals[mealKey];
-  //       const diff = Math.abs(meal.calories - calories / 3); // Divide by 3 for 3 meals
-  //       if (diff < closestDiff) {
-  //         closestDiff = diff;
-  //         closestMeal = meal;
-  //       }
-  //     });
-
-  //     selectedPlan[mealType] = closestMeal;
-  //   });
-
-  //   return selectedPlan;
-  // };
+    navigate("/dashboard/program");
+  };
 
   return (
     <div className="max-w-md mx-auto p-4 border rounded shadow-md bg-white">
       <h2 className="text-xl font-bold mb-4">Calculate Your Meal Plan</h2>
+      <button
+        className="border rounded-sm bg-red-500"
+        onClick={handleQuickMealGeneration}
+      >
+        hello click here to make the function work
+      </button>
       <form
         onSubmit={(e) => {
           e.preventDefault(); // Prevent form reload
           calculateCalories(); // Perform calculation
         }}
       >
-        {/* Age Input */}
+        {/* Form Inputs */}
         <label className="block mb-2 font-medium">Age:</label>
         <input
           type="number"
@@ -187,8 +233,6 @@ export default function MealPlanForm() {
           placeholder="Enter your age"
           required
         />
-
-        {/* Gender Input */}
         <label className="block mb-2 font-medium">Gender:</label>
         <select
           name="gender"
@@ -201,8 +245,6 @@ export default function MealPlanForm() {
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
-
-        {/* Weight Input */}
         <label className="block mb-2 font-medium">Weight (kg):</label>
         <input
           type="number"
@@ -213,8 +255,6 @@ export default function MealPlanForm() {
           placeholder="Enter your weight in kg"
           required
         />
-
-        {/* Height Input */}
         <label className="block mb-2 font-medium">Height (cm):</label>
         <input
           type="number"
@@ -225,8 +265,6 @@ export default function MealPlanForm() {
           placeholder="Enter your height in cm"
           required
         />
-
-        {/* Activity Level Input */}
         <label className="block mb-2 font-medium">Activity Level:</label>
         <select
           name="activityLevel"
@@ -242,47 +280,6 @@ export default function MealPlanForm() {
           <option value="very_active">Very Active (6-7 days/week)</option>
           <option value="extra_active">Extra Active (physical job)</option>
         </select>
-
-        <label className="block mb-2 font-medium"> Dietery Preferences: </label>
-        <select
-          name="mealPreference"
-          value={formData.mealPreference}
-          onChange={handleChange}
-          className="w-full mb-4 p-2 border rounded"
-        >
-          <option value="nonVeg"> Non-vegetarian</option>
-          <option value="veg"> Vegetarian </option>
-          <option value="eggetarian"> Eggetarian</option>
-        </select>
-
-        <label className="block mb-2 font-medium"> Preferred Breakfast:</label>
-        <input
-          name="breakfast"
-          type="text"
-          className="w-full mb-4 p-2 border rounded"
-          value={formData.breakfast}
-          onChange={handleChange}
-        />
-
-        <label className="block mb-2 font-medium"> Preferred Lunch:</label>
-        <input
-          name="lunch"
-          className="w-full mb-4 p-2 border rounded"
-          type="text"
-          value={formData.lunch}
-          onChange={handleChange}
-        />
-
-        <label className="block mb-2 font-medium"> Preferred Dinner:</label>
-        <input
-          name="dinner"
-          type="text"
-          value={formData.dinner}
-          onChange={handleChange}
-          className="w-full mb-4 p-2 border rounded"
-        />
-
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded font-medium hover:bg-blue-700"
@@ -290,19 +287,15 @@ export default function MealPlanForm() {
           Calculate
         </button>
       </form>
-
-      {/* Display Results */}
-      {calories && (
-        <div className="mt-4 p-4 bg-green-100 border rounded">
-          <h3 className="font-medium">Your daily calorie intake should be:</h3>
-          <p className="text-2xl font-bold">{calories} kcal</p>
-        </div>
+      {calories && <h1>{calories}</h1>}
+      {mealPlan && (
+        <button
+          onClick={handleMealPlan}
+          className="border bg-slate-700 text-white"
+        >
+          Show Meal Plan
+        </button>
       )}
-
-      {mealPlan &&
-        Object.keys(mealPlan).map((meal, index) => (
-          <MealCard key={index} meal={mealPlan[meal]} />
-        ))}
     </div>
   );
 }

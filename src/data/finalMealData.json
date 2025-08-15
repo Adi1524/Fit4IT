@@ -1,0 +1,221 @@
+{
+  "meals": {
+    "breakfast": [
+      {
+        "type": "nonVeg",
+        "name": "Oatmeal with Milk and Eggs ",
+        "baseQuantity": "60g, 180ml, 2",
+        "calories": 480,
+        "ingredients": [
+          {
+            "ingredient": "Oats",
+            "quantity": 60,
+            "caloriesPer100g": 356,
+            "protein": 11,
+            "carbs": 51,
+            "fats": 8,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "Milk",
+            "quantity": 180,
+            "caloriesPer100g": 63,
+            "protein": 3.4,
+            "carbs": 5.1,
+            "fats": 3.4,
+            "qualifier": 0.15
+          },
+          {
+            "ingredient": "Eggs",
+            "quantity": 140,
+            "caloriesPer100g": 70,
+            "protein": 6,
+            "carbs": 1,
+            "fats": 5,
+            "qualifier": 0.4
+          }
+        ]
+      },
+      {
+        "type": "nonVeg",
+        "name": "Upma and Moong",
+        "baseQuantity": "150g, 30g",
+        "calories": 417,
+        "ingredients": [
+          {
+            "ingredient": "Upma",
+            "quantity": 150,
+            "caloriesPer100g": 208,
+            "protein": 6.8,
+            "carbs": 38.1,
+            "fats": 3.2,
+            "qualifier": 0.75
+          },
+          {
+            "ingredient": "Moong(green gram, raw)",
+            "quantity": 30,
+            "caloriesPer100g": 347,
+            "protein": 24,
+            "carbs": 79,
+            "fats": 1.2,
+            "qualifier": 0.25
+          }
+        ]
+      }
+    ],
+    "lunch": [
+      {
+        "type": "nonVeg",
+        "name": "rice and curry, chicken",
+        "baseQuantity": "150g, 100ml, 150g",
+        "calories": 420,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 150,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.2
+          },
+          {
+            "ingredient": "Chicken Breast",
+            "quantity": 150,
+            "caloriesPer100g": 120,
+            "protein": 22.5,
+            "carbs": 0,
+            "fats": 2.6,
+            "qualifier": 0.4
+          }
+        ]
+      },
+      {
+        "type": "nonVeg",
+        "name": "Vegetable Pulavo With Paneer",
+        "baseQuantity": "100g,100g ,veggies 250g ",
+        "calories": 420,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 100,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.3
+          },
+          {
+            "ingredient": "paneer(low fat, milky mist)",
+            "quantity": 100,
+            "caloriesPer100g": 204,
+            "protein": 25,
+            "carbs": 5.6,
+            "fats": 9,
+            "qualifier": 0.47
+          },
+          {
+            "ingredient": "mixed veggies(for pulavo)",
+            "quantity": 250,
+            "caloriesPer100g": 41,
+            "protein": 0.9,
+            "carbs": 9.6,
+            "fats": 0.2,
+            "qualifier": 0.23
+          }
+        ]
+      }
+    ],
+    "dinner": [
+      {
+        "type": "nonVeg",
+        "name": "chapati and mixed veggies salad",
+        "baseQuantity": "80g, 300g",
+        "calories": 324,
+        "ingredients": [
+          {
+            "ingredient": "chapati",
+            "quantity": 80,
+            "caloriesPer100g": 240,
+            "protein": 8,
+            "carbs": 34,
+            "fats": 6,
+            "qualifier": 0.7
+          },
+          {
+            "ingredient": "Mixed Veggies",
+            "quantity": 300,
+            "caloriesPer100g": 41,
+            "protein": 0.9,
+            "carbs": 6.8,
+            "fats": 0.2,
+            "qualifier": 0.3
+          }
+        ]
+      }
+    ],
+    "snacks": [
+      {
+        "type": "nonVeg",
+        "name": "Apple And Almonds",
+        "baseQuantity": "200g, 15g",
+        "calories": 191,
+        "ingredients": [
+          {
+            "ingredient": "Apple",
+            "quantity": 200,
+            "caloriesPer100g": 52,
+            "protein": 0,
+            "carbs": 11,
+            "fats": 0,
+            "qualifier": 0.6
+          },
+          {
+            "ingredient": "Almonds",
+            "quantity": 15,
+            "caloriesPer100g": 579,
+            "protein": 21,
+            "carbs": 9,
+            "fats": 50,
+            "qualifier": 0.3
+          },
+          {
+            "type": "nonVeg",
+            "name": "Greek Yougurt and Fruits",
+            "baseQuantity": "100g, 200g",
+            "calories": 215,
+            "ingredients": [
+              {
+                "ingredient": "Greek Yogurt",
+                "quantity": 100,
+                "caloriesPer100g": 77,
+                "protein": 8,
+                "carbs": 6.2,
+                "fats": 2.2,
+                "qualifier": 0.35
+              },
+              {
+                "ingredient": "Mixed Fruits",
+                "quantity": 200,
+                "caloriesPer100g": 69,
+                "protein": 0.7,
+                "carbs": 18.1,
+                "fats": 0.2,
+                "qualifier": 0.65
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

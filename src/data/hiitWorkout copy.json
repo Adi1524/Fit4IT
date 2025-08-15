@@ -1,0 +1,115 @@
+{
+  "home": [
+    {
+      "day": 1,
+      "category": "beginner",
+      "duration": "5 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Jog in Place", "duration": "40s" },
+          { "name": "Walking High Knees", "duration": "40s" },
+          { "name": "Vertical Jump", "duration": "40s" },
+          { "name": "Invisible Jump Rope", "duration": "40s" },
+          { "name": "Jumping Jacks", "duration": "40s" }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 1
+      }
+    },
+    {
+      "day": 2,
+      "category": "beginner",
+      "duration": "10 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Jog in Place", "duration": "40s" },
+          { "name": "Walking High Knees", "duration": "40s" },
+          { "name": "Vertical Jump", "duration": "40s" },
+          { "name": "Invisible Jump Rope", "duration": "40s" },
+          { "name": "Jumping Jacks", "duration": "40s" }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 2
+      }
+    },
+    {
+      "day": 3,
+      "category": "beginner",
+      "duration": "15 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Mountain Hiker", "duration": "30s" },
+          { "name": "Side Squat With Leg Lift", "duration": "30s" },
+          { "name": "Reverse Lunge(Alternating)", "duration": "30s" },
+          { "name": "Glute Bridge", "duration": "30s" }
+        ],
+        "restBetweenExercises": "40s",
+        "rounds": 3
+      }
+    },
+    {
+      "day": 4,
+      "category": "beginner",
+      "duration": "14 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Bear Crawl SwitchBack", "duration": "40s" },
+          { "name": "Superman", "duration": "40s" },
+          { "name": "Asymmentrical Push-up On Knees", "duration": "40s" },
+          { "name": "Russian Twist", "duration": "40s" },
+          { "name": "T Superman", "duration": "40s" }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 2
+      }
+    },
+    {
+      "day": 5,
+      "category": "beginner",
+      "duration": "14 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Bear Crawl SwitchBack", "duration": "40s" },
+          { "name": "Superman", "duration": "40s" },
+          { "name": "Asymmentrical Push-up On Knees", "duration": "40s" },
+          { "name": "Russian Twist", "duration": "40s" },
+          { "name": "T Superman", "duration": "40s" }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 2
+      }
+    },
+    {
+      "category": "intermediate",
+      "duration": "25 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          { "name": "Plank", "duration": "50s/40s" },
+          { "name": "Leg Raises", "duration": "50s/40s" },
+          { "name": "Side Shuffle with Toe Tap", "duration": "50s/40s" },
+          {
+            "name": "Plank on Knees with Alternate Arms",
+            "duration": "50s/40s"
+          },
+          { "name": "Pulsing Lunge", "duration": "50s/40s" },
+          { "name": "Sumo Squat", "duration": "50s/40s" }
+        ],
+        "restBetweenExercises": "10s",
+        "rounds": 4,
+        "roundBreak": "40s",
+        "roundDurations": [
+          { "round": 1, "exerciseDuration": "50s" },
+          { "round": 2, "exerciseDuration": "50s" },
+          { "round": 3, "exerciseDuration": "40s" },
+          { "round": 4, "exerciseDuration": "40s" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Selected button */
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: #fff;
+  background-color: #dfe068;
+  border-color: #dfe068 !important;
+  border-left: #dfe068 !important;
+}
+
+/* Hover state */
+.ant-radio-button-wrapper:hover {
+  color: black !important;
+  border-color: #dfe068 !important;
+}
+
+/* Active/focus state */
+
+.ant-radio-button-wrapper:active {
+  color: #dfe068 !important;
+  border-color: #dfe068 !important;
+  box-shadow: 0 0 0 2px rgba(223, 224, 104, 0.2) !important; /* Optional */
+}
+
+.ant-radio-button-wrapper:focus {
+  border-color: #dfe068 !important;
+  box-shadow: 0 0 0 2px rgba(223, 224, 104, 0.2) !important; /* Optional */
+}
+
+/* Override blue highlight on focus */
+.ant-radio-button-wrapper:focus::before,
+.ant-radio-button-wrapper:active::before {
+  background: none !important;
+}
+
+.custom-select .ant-select-selector {
+  border-radius: 1rem !important; /* same as rounded-2xl */
+  padding: 4px 12px !important; /* similar to px-4 py-1 */
+}
+
+.custom-modal .ant-modal-content {
+  padding: 0 !important;
+  background-color: white; /* Optional */
+}
+
+.custom-modal .ant-modal-header {
+  display: none !important;
+}
+
+.custom-modal .ant-modal-close {
+  display: none !important;
+}

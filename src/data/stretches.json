@@ -1,0 +1,342 @@
+[
+  {
+    "name": "Beginner Full Body Stretch",
+    "category": "beginner",
+    "duration": "10 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Neck Rolls",
+          "duration": "30s",
+          "videoLink": "X-CUlo4zf0Y?si"
+        },
+        {
+          "name": "Arm Circles",
+          "duration": "30s",
+          "videoLink": "UVMEnIaY8aU?s"
+        },
+        {
+          "name": "Standing Side Stretch",
+          "duration": "30s",
+          "videoLink": "CwgeTuh3MDQ?s"
+        },
+        {
+          "name": "Seated Forward Fold",
+          "duration": "30s",
+          "videoLink": "SLIaql7h6RQ?si"
+        },
+        {
+          "name": "Child's Pose",
+          "duration": "1 min",
+          "videoLink": "kH12QrSGedM?si"
+        }
+      ],
+      "restBetweenExercises": "15s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Upper Body Stretch Beginner",
+    "category": "beginner",
+    "duration": "8 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Neck Tilts (L & R)",
+          "duration": "30s",
+          "videoLink": "QatBdq1IMAw?si"
+        },
+        {
+          "name": "Shoulder Rolls",
+          "duration": "30s",
+          "videoLink": "X7NtgY9kCCM?si"
+        },
+        {
+          "name": "Cross Arm Stretch",
+          "duration": "30s",
+          "videoLink": "-1K0m5ywRcY?si"
+        },
+        {
+          "name": "Triceps Stretch",
+          "duration": "30s",
+          "videoLink": "ohmRImmdo8I?si"
+        },
+        {
+          "name": "Chest Opener Stretch",
+          "duration": "1 min",
+          "videoLink": "16qCwSMGqx4?si"
+        }
+      ],
+      "restBetweenExercises": "15s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Lower Body Stretch Beginner",
+    "category": "beginner",
+    "duration": "9 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Quad Stretch (R)",
+          "duration": "30s",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Quad Stretch (L)",
+          "duration": "30s",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Seated Hamstring Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Butterfly Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Calf Stretch (Wall)",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "20s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Lower Back Relief Stretch",
+    "category": "beginner",
+    "duration": "8 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Cat-Cow Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Child’s Pose",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Knee-to-Chest Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Seated Spinal Twist",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "30s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Relaxation Cool-Down Beginner",
+    "category": "beginner",
+    "duration": "6 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Deep Breathing",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Child’s Pose",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Lying Supine Twist (L)",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Lying Supine Twist (R)",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Legs Up Wall",
+          "duration": "2 min",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "10s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Intermediate Full Body Stretch Flow",
+    "category": "intermediate",
+    "duration": "12 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Standing Forward Fold",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Lunge with Spinal Twist",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Downward Dog to Cobra Flow",
+          "duration": "2 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Child’s Pose to Thread the Needle",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "15s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Upper Body Deep Stretch",
+    "category": "intermediate",
+    "duration": "10 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Wall Chest Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Triceps & Lat Stretch (L & R)",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Upper Trap Stretch",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Thread the Needle (L & R)",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "20s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Lower Body Flexibility Boost",
+    "category": "intermediate",
+    "duration": "11 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Lizard Pose",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Pigeon Pose",
+          "duration": "1 min each side",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Hamstring Stretch with Strap",
+          "duration": "2 min each leg",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "20s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Lower Back Mobility Flow",
+    "category": "intermediate",
+    "duration": "9 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Seated Twist (L & R)",
+          "duration": "1 min each",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Bridge Pose Hold",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Happy Baby Pose",
+          "duration": "2 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Windshield Wipers",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "30s",
+      "rounds": 1
+    }
+  },
+  {
+    "name": "Evening Relaxation Routine",
+    "category": "intermediate",
+    "duration": "10 minutes",
+    "type": "Stretching Routine",
+    "details": {
+      "exercises": [
+        {
+          "name": "Breath Awareness (lying down)",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Supine Twist (L & R)",
+          "duration": "1 min each",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Butterfly Fold",
+          "duration": "1 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Legs on Wall",
+          "duration": "2 min",
+          "videoLink": "u1gmWFvEluM"
+        },
+        {
+          "name": "Corpse Pose (Shavasana)",
+          "duration": "3 min",
+          "videoLink": "u1gmWFvEluM"
+        }
+      ],
+      "restBetweenExercises": "10s",
+      "rounds": 1
+    }
+  }
+]

@@ -1,0 +1,435 @@
+{
+  "home": [
+    {
+      "name": "Low Impact Full Body Starter",
+      "category": "beginner",
+      "duration": "10 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "March in Place",
+            "duration": "40s",
+            "videoLink": "u1gmWFvEluM"
+          },
+          {
+            "name": "Wall Push-ups",
+            "duration": "40s",
+            "videoLink": "YB0egDzsu18"
+          },
+          {
+            "name": "Standing Oblique Crunch",
+            "duration": "40s",
+            "videoLink": "yZmq_xSkhI0?si"
+          },
+          {
+            "name": "Bodyweight Squats",
+            "duration": "40s",
+            "videoLink": "8uoaYwS6iFM?si"
+          },
+          {
+            "name": "Arm Circles Forward & Back",
+            "duration": "40s",
+            "videoLink": "UVMEnIaY8aU?si"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Beginner Booty Blaster",
+      "category": "beginner",
+      "duration": "12 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Glute Bridge",
+            "duration": "30s",
+            "videoLink": "Xp33YgPZgns?si"
+          },
+          {
+            "name": "Donkey Kicks (Right)",
+            "duration": "30s",
+            "videoLink": "QreOl2tgC-8?si"
+          },
+          {
+            "name": "Donkey Kicks (Left)",
+            "duration": "30s",
+            "videoLink": "QreOl2tgC-8?si"
+          },
+          {
+            "name": "Bodyweight Squats",
+            "duration": "30s",
+            "videoLink": "8uoaYwS6iFM?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 3
+      }
+    },
+    {
+      "name": "Core Awakener",
+      "category": "beginner",
+      "duration": "10 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Seated Knee Tucks",
+            "duration": "30s",
+            "videoLink": "HR_1AqBmVAU?si"
+          },
+          {
+            "name": "Plank on Knees",
+            "duration": "30s",
+            "videoLink": "Of0YDiN9p00?si"
+          },
+          {
+            "name": "Toe Taps (Lying Down)",
+            "duration": "30s",
+            "videoLink": "yvoIdwwwCpE?si"
+          },
+          {
+            "name": "Dead Bug",
+            "duration": "30s",
+            "videoLink": "xtTIb6dC-vI?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Standing Fat Burner",
+      "category": "beginner",
+      "duration": "8 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Step Touch",
+            "duration": "30s",
+            "videoLink": "wH9hsR7Ck_M?si"
+          },
+          {
+            "name": "Punches",
+            "duration": "30s",
+            "videoLink": "IpKpcboairw?si"
+          },
+          {
+            "name": "Knee Pulls",
+            "duration": "30s",
+            "videoLink": "LAQg6iA7R2Y?si"
+          },
+          {
+            "name": "Side Reaches",
+            "duration": "30s",
+            "videoLink": "-ruAdV34H54?s"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Balance & Strength Basics",
+      "category": "beginner",
+      "duration": "10 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Single Leg Balance Hold (Right)",
+            "duration": "30s",
+            "videoLink": "7SF7AYh2_Yw?si"
+          },
+          {
+            "name": "Single Leg Balance Hold (Left)",
+            "duration": "30s",
+            "videoLink": "7SF7AYh2_Yw?si"
+          },
+          {
+            "name": "Chair Squat Hold",
+            "duration": "30s",
+            "videoLink": "GIz1C3yfE1s?si"
+          },
+          {
+            "name": "Knee Push-Ups",
+            "duration": "30s",
+            "videoLink": "WcHtt6zT3Go?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Quick Cardio Igniter",
+      "category": "beginner",
+      "duration": "5 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Jog in Place",
+            "duration": "40s",
+            "videoLink": "iWkH4OTjVkQ?si"
+          },
+          {
+            "name": "Walking High Knees",
+            "duration": "40s",
+            "videoLink": "cnIf7nvrdlg?si"
+          },
+          {
+            "name": "Vertical Jump",
+            "duration": "40s",
+            "videoLink": "j260zYfRz8Q?si"
+          },
+          {
+            "name": "Invisible Jump Rope",
+            "duration": "40s",
+            "videoLink": "XZBs7xlrNAw?si"
+          },
+          {
+            "name": "Jumping Jacks",
+            "duration": "40s",
+            "videoLink": "uLVt6u15L98?si"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 1
+      }
+    },
+    {
+      "name": "Full-Body Fat Burner",
+      "category": "beginner",
+      "duration": "15 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Mountain Hiker",
+            "duration": "30s",
+            "videoLink": "ruQ4ZwncXBg?si"
+          },
+          {
+            "name": "Side Squat With Leg Lift",
+            "duration": "30s",
+            "videoLink": "yAjVrjKvl-o?si"
+          },
+          {
+            "name": "Reverse Lunge(Alternating)",
+            "duration": "30s",
+            "videoLink": "5frs7_F2SrU?si"
+          },
+          {
+            "name": "Glute Bridge",
+            "duration": "30s",
+            "videoLink": "Xp33YgPZgns?si"
+          }
+        ],
+        "restBetweenExercises": "40s",
+        "rounds": 3
+      }
+    },
+    {
+      "name": "Core & Strength Shredder",
+      "category": "beginner",
+      "duration": "14 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Bear Crawl SwitchBack",
+            "duration": "40s",
+            "videoLink": "-JcD5SOqW50?si"
+          },
+          {
+            "name": "Superman",
+            "duration": "40s",
+            "videoLink": "cZxtPxeR2H8?si"
+          },
+          {
+            "name": "Asymmetrical Push-up On Knees",
+            "duration": "40s",
+            "videoLink": "X3kuQFqg2p8?si"
+          },
+          {
+            "name": "Russian Twist",
+            "duration": "40s",
+            "videoLink": "VfWoNC-NMII?si"
+          },
+          {
+            "name": "T Superman",
+            "duration": "40s",
+            "videoLink": "gMnehzijw24?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Explosive Core Circuit",
+      "category": "intermediate",
+      "duration": "18 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "V-Ups",
+            "duration": "40s",
+            "videoLink": "iP2fjvG0g3w?s"
+          },
+          {
+            "name": "Bicycle Crunch",
+            "duration": "40s",
+            "videoLink": "cbKIDZ_XyjY?si"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "duration": "40s",
+            "videoLink": "jgQ49dXfznk?si"
+          },
+          {
+            "name": "Flutter Kicks",
+            "duration": "40s",
+            "videoLink": "ZEjloSZwXqI?si"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 3
+      }
+    },
+    {
+      "name": "Total Body Burnout",
+      "category": "intermediate",
+      "duration": "20 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Burpees",
+            "duration": "40s",
+            "videoLink": "NCqbpkoiyXE?si"
+          },
+          {
+            "name": "Push-ups",
+            "duration": "40s",
+            "videoLink": "WDIpL0pjun0?si"
+          },
+          {
+            "name": "Jump Squats",
+            "duration": "40s",
+            "videoLink": "BRfxI2Es2lE?si"
+          },
+          {
+            "name": "Mountain Climbers",
+            "duration": "40s",
+            "videoLink": "ruQ4ZwncXBg?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 3
+      }
+    },
+    {
+      "name": "Lower Body Power",
+      "category": "intermediate",
+      "duration": "16 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Jumping Lunges",
+            "duration": "40s",
+            "videoLink": "iJMsF7fzrOM?si"
+          },
+          {
+            "name": "Wall Sit",
+            "duration": "40s",
+            "videoLink": "cWTZ8Am1Ee0?si"
+          },
+          {
+            "name": "Calf Raises",
+            "duration": "40s",
+            "videoLink": "eMTy3qylqnE?si"
+          },
+          {
+            "name": "Single Leg Deadlift (Bodyweight)",
+            "duration": "40s",
+            "videoLink": "FujJkRLG1Fg?si"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 2
+      }
+    },
+    {
+      "name": "Core Control & Burn",
+      "category": "intermediate",
+      "duration": "14 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Side Plank (Right)",
+            "duration": "30s",
+            "videoLink": "NQsqPcarPXY?si"
+          },
+          {
+            "name": "Side Plank (Left)",
+            "duration": "30s",
+            "videoLink": "NQsqPcarPXY?si"
+          },
+          {
+            "name": "Plank Knee Taps",
+            "duration": "30s",
+            "videoLink": "qyGjSh52fz8?s"
+          },
+          {
+            "name": "Bird-Dog Crunch",
+            "duration": "30s",
+            "videoLink": "4ykI5G8EqQM?si"
+          }
+        ],
+        "restBetweenExercises": "30s",
+        "rounds": 3
+      }
+    },
+    {
+      "name": "Agility & Speed Drill",
+      "category": "intermediate",
+      "duration": "20 minutes",
+      "type": "HIIT Circuit",
+      "details": {
+        "exercises": [
+          {
+            "name": "Lateral Bounds",
+            "duration": "30s",
+            "videoLink": "soqQy4dzEts?si"
+          },
+          {
+            "name": "High Knees",
+            "duration": "30s",
+            "videoLink": "N4VwL0WGhzw?si"
+          },
+          {
+            "name": "Quick Feet In-Place",
+            "duration": "30s",
+            "videoLink": "vrThTBw0png?s"
+          },
+          {
+            "name": "Skaters",
+            "duration": "30s",
+            "videoLink": "9_jLW6VkU8A?si"
+          }
+        ],
+        "restBetweenExercises": "20s",
+        "rounds": 4
+      }
+    }
+  ]
+}

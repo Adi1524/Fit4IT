@@ -1,7 +1,16 @@
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust paths based on your project structure
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"], // Add Poppins as a custom font
+      },
+      colors: {
+        primary: "#dfe068", // ✅ Add your primary color here
+      },
+    },
   },
   plugins: [],
 };

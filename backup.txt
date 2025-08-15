@@ -1,0 +1,45 @@
+result[category] = mealData.meals[category].map((meal) => {
+        const adjustedIngredients = meal.ingredients.map((ingredient) => {
+          // Extract calories per gram from ingredient info
+          const caloriesPerGram = ingredient.caloriesPer100g / 100;
+
+          // Calculate the maximum quantity of the ingredient allowed
+          const adjustedCalories = Math.min(
+            maxCaloriesForCategory * ingredient.qualifier
+            // ingredient.quantity * 2 // Limit scaling to 2x
+          );
+
+          const maxQuantity =
+            (adjustedCalories * 100) / ingredient.caloriesPer100g;
+
+          // Calculate macros and calories for the adjusted quantity
+          // const adjustedCalories = maxQuantity * caloriesPerGram;
+          const adjustedProtein = (ingredient.protein / 100) * maxQuantity;
+          const adjustedCarbs = (ingredient.carbs / 100) * maxQuantity;
+          const adjustedFats = (ingredient.fats / 100) * maxQuantity;
+
+          // Add the adjusted macros to the category totals
+          categoryCalories += adjustedCalories;
+          categoryProtein += adjustedProtein;
+          categoryCarbs += adjustedCarbs;
+          categoryFats += adjustedFats;
+
+          console.log(
+            "is this changing the meal or is it capturing only the first meal"
+          );
+
+          return {
+            ingredient: ingredient.ingredient,
+            quantity: Math.round(maxQuantity), // Adjusted quantity
+            calories: Math.round(adjustedCalories), // Adjusted calories
+            protein: adjustedProtein.toFixed(2), // Adjusted protein
+            carbs: adjustedCarbs.toFixed(2), // Adjusted carbs
+            fats: adjustedFats.toFixed(2), // Adjusted fats
+          };
+        });
+
+        return {
+          ...meal,
+          ingredients: adjustedIngredients,
+        };
+      });

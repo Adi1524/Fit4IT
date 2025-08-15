@@ -1,228 +1,671 @@
 {
-  "veg": {
-    "breakfast": {
-      "bread": {
-        "item": "Bread with Peanut Butter",
-        "quantity": {
-          "bread": "2 slices",
-          "peanutButter": "15g"
-        },
-        "protein": 10,
-        "carbs": 30,
-        "fats": 12,
-        "calories": 250
+  "meals": {
+    "breakfast": [
+      {
+        "type": "veg",
+        "name": "Upma and Moong",
+        "baseQuantity": "150g, 30g",
+        "calories": 417,
+        "ingredients": [
+          {
+            "ingredient": "Upma",
+            "quantity": 150,
+            "caloriesPer100g": 208,
+            "protein": 6.8,
+            "carbs": 38.1,
+            "fats": 3.2,
+            "qualifier": 0.75
+          },
+          {
+            "ingredient": "Moong(green gram, raw)",
+            "quantity": 30,
+            "caloriesPer100g": 347,
+            "protein": 24,
+            "carbs": 79,
+            "fats": 1.2,
+            "qualifier": 0.25
+          }
+        ]
       },
-      "idli": {
-        "item": "Idli with Sambar",
-        "quantity": {
-          "idli": "4 idlis",
-          "sambar": "100g"
-        },
-        "protein": 8,
-        "carbs": 35,
-        "fats": 5,
-        "calories": 220
-      }
-    },
-    "lunch": {
-      "rice": {
-        "item": "Rice with Dal",
-        "quantity": {
-          "rice": "100g",
-          "dal": "150g"
-        },
-        "protein": 15,
-        "carbs": 50,
-        "fats": 8,
-        "calories": 400
+      {
+        "type": "nonVeg",
+        "name": "Oatmeal with Milk and Eggs ",
+        "baseQuantity": "60g, 180ml, 2",
+        "calories": 480,
+        "ingredients": [
+          {
+            "ingredient": "Oats",
+            "quantity": 60,
+            "caloriesPer100g": 356,
+            "protein": 11,
+            "carbs": 51,
+            "fats": 8,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "Milk",
+            "quantity": 180,
+            "caloriesPer100g": 63,
+            "protein": 3.4,
+            "carbs": 5.1,
+            "fats": 3.4,
+            "qualifier": 0.15
+          },
+          {
+            "ingredient": "Eggs",
+            "quantity": 140,
+            "caloriesPer100g": 70,
+            "protein": 6,
+            "carbs": 1,
+            "fats": 5,
+            "qualifier": 0.4
+          }
+        ]
       },
-      "quinoa": {
-        "item": "Quinoa with Veg Curry",
-        "quantity": {
-          "quinoa": "120g",
-          "vegCurry": "200g"
-        },
-        "protein": 20,
-        "carbs": 45,
-        "fats": 7,
-        "calories": 500
-      }
-    },
-    "dinner": {
-      "chapati": {
-        "item": "Chapati with Paneer Bhurji",
-        "quantity": {
-          "chapati": "2 chapatis",
-          "paneerBhurji": "200g"
-        },
-        "protein": 25,
-        "carbs": 40,
-        "fats": 10,
-        "calories": 500
+      {
+        "type": "veg",
+        "name": "Ragi Dosa With Onion-Tomato Chutney",
+        "baseQuantity": "60g, 100g",
+        "calories": 480,
+        "ingredients": [
+          {
+            "ingredient": "Ragi",
+            "quantity": 60,
+            "caloriesPer100g": 354,
+            "protein": 13,
+            "carbs": 80,
+            "fats": 3.4,
+            "qualifier": 0.7
+          },
+          {
+            "ingredient": "Tomato-Onion Chutney",
+            "quantity": 100,
+            "caloriesPer100g": 89,
+            "protein": 1.1,
+            "carbs": 6.3,
+            "fats": 7.1,
+            "qualifier": 0.3
+          }
+        ],
+        "description": "You can also skip the Chutney and add any sambar or Vegetable gravy(it should not be oily).",
+        "recipe": {
+          "ingredients": [
+            "Ragi Flour As Mentioned",
+            "1 tbsp Rice Flour (Optional, for crispiness)",
+            "¼ cup Curd or Buttermilk",
+            "½ cup Water (adjust to get pourable consistency)",
+            "¼ tsp Salt (or as per taste)",
+            "½ tsp Cumin Seeds (optional, for flavor & digestion)",
+            "1 small Green Chili (finely chopped, optional)",
+            "1 tbsp Finely Chopped Coriander & Curry Leaves",
+            "Oil or Ghee (for greasing the pan)"
+          ],
+          "instructions": [
+            "In a bowl, mix ragi flour, rice flour, curd/buttermilk, and salt.",
+            "Gradually add water and stir well to form a smooth, thin batter (like rava dosa batter).",
+            "Add cumin seeds, chopped green chilies, and coriander leaves. Let it rest for 5-10 minutes.",
+            "Heat a non-stick or cast iron tawa on medium flame and grease it with a few drops of oil or ghee.",
+            "Pour a thin layer of batter from the edges towards the center (like neer dosa style).",
+            "Do not spread with a ladle—just let it naturally form holes for crispiness.",
+            "Drizzle a few drops of oil around the edges and cook for 2-3 minutes on medium heat until the edges turn crispy.",
+            "Flip (optional) and cook for another 30 seconds.",
+            "Serve hot with coconut chutney, peanut chutney, or vegetable sambar."
+          ]
+        }
       },
-      "millet": {
-        "item": "Millet Roti with Veg Curry",
-        "quantity": {
-          "milletRoti": "2 millet rotis",
-          "vegCurry": "200g"
-        },
-        "protein": 18,
-        "carbs": 35,
-        "fats": 6,
-        "calories": 450
-      }
-    }
-  },
-  "nonVeg": {
-    "breakfast": {
-      "eggs": {
-        "item": "Scrambled Eggs with Spinach",
-        "quantity": {
-          "eggs": "3",
-          "spinach": "50g"
-        },
-        "protein": 20,
-        "carbs": 5,
-        "fats": 15,
-        "calories": 350
+      {
+        "type": "veg",
+        "name": "Poha With Veggies",
+        "baseQuantity": "50g, 150g",
+        "calories": 209,
+        "ingredients": [
+          {
+            "ingredient": "Poha",
+            "quantity": 50,
+            "caloriesPer100g": 136,
+            "protein": 2.5,
+            "carbs": 30.1,
+            "fats": 0.2,
+            "qualifier": 0.5
+          },
+          {
+            "ingredient": "Peanuts",
+            "quantity": 10,
+            "caloriesPer100g": 587,
+            "protein": 24.4,
+            "carbs": 21.3,
+            "fats": 49.7,
+            "qualifier": 0.3
+          },
+          {
+            "ingredient": "Mixed Veggies",
+            "quantity": 100,
+            "caloriesPer100g": 41,
+            "protein": 0.9,
+            "carbs": 9.6,
+            "fats": 0.2,
+            "qualifier": 0.2
+          }
+        ],
+        "description": "Do not use oil over 5ml.",
+        "recipe": {
+          "ingredients": [
+            "As Mentioned Poha (Flattened Rice, Thick Variety)",
+            "½ cup Mixed Vegetables (Carrot, Beans, Capsicum, Peas - finely chopped)",
+            "1 small Onion (finely chopped)",
+            "1 small Tomato (finely chopped, optional)",
+            "1 small Green Chili (finely chopped, optional)",
+            "½ tsp Mustard Seeds",
+            "½ tsp Cumin Seeds",
+            "5-6 Curry Leaves",
+            "½ tsp Turmeric Powder",
+            "¼ tsp Red Chili Powder (optional)",
+            "½ tsp Coriander Powder",
+            "1 tbsp Roasted Peanuts (for crunch & protein)",
+            "1 tsp Lemon Juice (for freshness)",
+            "½ tsp Salt (or as per taste)",
+            "1 tsp Oil (Olive oil or Ghee)",
+            "2 tbsp Coriander Leaves (finely chopped, for garnish)"
+          ],
+          "instructions": [
+            "Rinse poha under running water for 10-15 seconds, drain excess water, and let it rest for 5 minutes to soften.",
+            "Heat 1 tsp oil in a pan and add mustard seeds, cumin seeds, and curry leaves.",
+            "Once they splutter, add chopped onions and sauté until translucent.",
+            "Add mixed vegetables and sauté for 5-7 minutes until cooked and tender.",
+            "Add turmeric powder, red chili powder, and coriander powder, then mix well.",
+            "Add softened poha to the pan, mix gently with the vegetable-spice mixture.",
+            "Cook for another 2-3 minutes, ensuring the poha is well combined with the spices.",
+            "Sprinkle salt, roasted peanuts, and lemon juice, then mix again.",
+            "Garnish with fresh coriander leaves and serve hot."
+          ]
+        }
       },
-      "chickenSandwich": {
-        "item": "Chicken Sandwich",
-        "quantity": {
-          "bread": "2 slices",
-          "chicken": "100g",
-          "mayo": "20g"
-        },
-        "protein": 25,
-        "carbs": 30,
-        "fats": 10,
-        "calories": 400
+      {
+        "type": "veg",
+        "name": "Idli And Sambar",
+        "baseQuantity": "100g, 200g",
+        "calories": 209,
+        "ingredients": [
+          {
+            "ingredient": "Idli",
+            "quantity": 100,
+            "caloriesPer100g": 151,
+            "protein": 4.3,
+            "carbs": 30.2,
+            "fats": 1.1,
+            "qualifier": 0.6
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.3
+          }
+        ],
+        "description": "Optional: you can add mint chutney, Do not use coconut or penaut Chutney it has more calories",
+        "recipe": {
+          "ingredients": [
+            "1 cup Idli Rice",
+            "1 tbsp Urad Dal (split black gram)",
+            "1 tsp Fenugreek Seeds (optional)",
+            "Water (for soaking and grinding)",
+            "½ tsp Salt"
+          ],
+          "instructions": [
+            "Soak the idli rice, urad dal, and fenugreek seeds separately in water for 4-6 hours or overnight.",
+            "Grind the soaked rice and dal into a smooth batter, adding water as needed. The consistency should be like a thick pancake batter.",
+            "Let the batter ferment in a warm place for 8-12 hours or overnight.",
+            "Grease the idli molds with oil or cooking spray and pour the batter into the molds.",
+            "Steam the idlis for 10-15 minutes, until cooked through.",
+            "Serve hot with chutney or sambar."
+          ]
+        }
       }
-    },
-    "lunch": {
-      "rice": {
-        "item": "Rice with Chicken Curry",
-        "quantity": {
-          "rice": "100g",
-          "chickenCurry": "200g"
-        },
-        "protein": 30,
-        "carbs": 50,
-        "fats": 12,
-        "calories": 600
+    ],
+    "lunch": [
+      {
+        "protein": 1,
+        "type": "veg",
+        "name": "Vegetable Pulavo With Paneer",
+        "baseQuantity": "100g,100g , 250g ",
+        "calories": 420,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 100,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "paneer(low fat, milky mist)",
+            "quantity": 100,
+            "caloriesPer100g": 204,
+            "protein": 25,
+            "carbs": 5.6,
+            "fats": 9,
+            "qualifier": 0.2
+          },
+          {
+            "ingredient": "mixed veggies(for pulavo)",
+            "quantity": 250,
+            "caloriesPer100g": 41,
+            "protein": 0.9,
+            "carbs": 9.6,
+            "fats": 0.2,
+            "qualifier": 0.1
+          }
+        ]
       },
-      "brownRice": {
-        "item": "Brown Rice with Fish Curry",
-        "quantity": {
-          "brownRice": "100g",
-          "fishCurry": "150g"
-        },
-        "protein": 25,
-        "carbs": 45,
-        "fats": 10,
-        "calories": 550
-      }
-    },
-    "dinner": {
-      "chapati": {
-        "item": "Chapati with Grilled Chicken",
-        "quantity": {
-          "chapati": "2 chapatis",
-          "grilledChicken": "150g"
-        },
-        "protein": 28,
-        "carbs": 35,
-        "fats": 8,
-        "calories": 500
+      {
+        "protein": 0,
+        "type": "veg",
+        "name": "Legendary Meal!!Rice , Sambar And Palya",
+        "baseQuantity": "150g,100g , 100g ",
+        "calories": 366,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 100,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.53
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.21
+          },
+          {
+            "ingredient": "Palya (Vegetable Stir-Fry)",
+            "quantity": 100,
+            "caloriesPer100g": 95,
+            "protein": 2,
+            "carbs": 8,
+            "fats": 5,
+            "qualifier": 0.26
+          }
+        ],
+        "description": "You can also take normal veggies if you cannot prepare palya. If consuming palya make sure to not add much oil(Avoid veggies mentinoed in the avoid section)"
       },
-      "millet": {
-        "item": "Millet Roti with Fish Curry",
-        "quantity": {
-          "milletRoti": "2 millet rotis",
-          "fishCurry": "200g"
-        },
-        "protein": 22,
-        "carbs": 40,
-        "fats": 6,
-        "calories": 480
-      }
-    }
-  },
-  "eggetarian": {
-    "breakfast": {
-      "omelette": {
-        "item": "Omelette with Veggies",
-        "quantity": {
-          "eggs": "3",
-          "veggies": "100g"
-        },
-        "protein": 18,
-        "carbs": 10,
-        "fats": 12,
-        "calories": 300
+      {
+        "protein": 0,
+        "type": "veg",
+        "name": "Rice , Sambar And curd",
+        "baseQuantity": "150g,100g , 100g ",
+        "calories": 332,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 100,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.58
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.23
+          },
+          {
+            "ingredient": "Curd",
+            "quantity": 100,
+            "caloriesPer100g": 61,
+            "protein": 3.5,
+            "carbs": 4.7,
+            "fats": 3.2,
+            "qualifier": 0.18
+          }
+        ],
+        "description": "You can have curd as buttermilk as well. If your still hungry add veggies it will keep you fuller :)"
       },
-      "bread": {
-        "item": "Bread with Boiled Egg",
-        "quantity": {
-          "bread": "2 slices",
-          "boiledEgg": "1"
-        },
-        "protein": 15,
-        "carbs": 25,
-        "fats": 8,
-        "calories": 250
-      }
-    },
-    "lunch": {
-      "rice": {
-        "item": "Rice with Egg Curry",
-        "quantity": {
-          "rice": "100g",
-          "eggs": "2",
-          "curry": "150g"
-        },
-        "protein": 20,
-        "carbs": 50,
-        "fats": 10,
-        "calories": 500
+      {
+        "type": "nonVeg",
+        "protein": 1,
+        "name": "rice and Sambar, chicken",
+        "baseQuantity": "150g, 100ml, 150g",
+        "calories": 420,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 150,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.2
+          },
+          {
+            "ingredient": "Chicken Breast",
+            "quantity": 150,
+            "caloriesPer100g": 120,
+            "protein": 22.5,
+            "carbs": 0,
+            "fats": 2.6,
+            "qualifier": 0.4
+          }
+        ]
       },
-      "quinoa": {
-        "item": "Quinoa with Egg Stir-fry",
-        "quantity": {
-          "quinoa": "120g",
-          "eggs": "2",
-          "stirFriedVeggies": "100g"
-        },
-        "protein": 25,
-        "carbs": 45,
-        "fats": 7,
-        "calories": 550
+      {
+        "type": "nonVeg",
+        "protein": 1,
+        "name": "Lazy Chicken(5 Min), Rice and Sambar",
+        "baseQuantity": "150g, 100ml, 200g",
+        "calories": 513,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 150,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.4
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.2
+          },
+          {
+            "ingredient": "Chicken thigh, raw, skinless",
+            "quantity": 200,
+            "caloriesPer100g": 121,
+            "protein": 19.7,
+            "carbs": 0,
+            "fats": 4.1,
+            "qualifier": 0.4
+          }
+        ],
+        "description": "Try to add as less oil as possible. Best Alternative would be to use oil spary.",
+        "recipe": {
+          "ingredients": [
+            "200g boneless chicken (cut into small pieces)",
+            "1 tbsp butter (or ghee)",
+            "1 tsp garlic (minced or paste)",
+            "1/2 tsp red chili powder",
+            "1/4 tsp turmeric powder",
+            "1/2 tsp black pepper",
+            "1/2 tsp salt",
+            "1/2 tsp lemon juice",
+            "1/2 tsp garam masala (optional)",
+            "Chopped coriander leaves (for garnish, optional)"
+          ],
+          "instructions": [
+            "Heat a pan and add 1 tbsp butter or ghee.",
+            "Add minced garlic and sauté for 30 seconds until fragrant.",
+            "Add chicken pieces and stir-fry on high heat for 3-4 minutes.",
+            "Sprinkle turmeric, red chili powder, black pepper, and salt. Mix well.",
+            "Squeeze lemon juice and add garam masala for extra flavor.",
+            "Cook for 1 more minute, then garnish with fresh coriander leaves.",
+            "Serve hot with rice, roti, or as a protein snack."
+          ]
+        }
       }
-    },
-    "dinner": {
-      "chapati": {
-        "item": "Chapati with Egg Bhurji",
-        "quantity": {
-          "chapati": "2 chapatis",
-          "eggs": "2"
-        },
-        "protein": 18,
-        "carbs": 35,
-        "fats": 8,
-        "calories": 400
+    ],
+    "dinner": [
+      {
+        "type": "veg",
+        "protein": 1,
+        "name": "chapati and Paneer gravy",
+        "baseQuantity": "80g, 100g",
+        "calories": 396,
+        "ingredients": [
+          {
+            "ingredient": "chapati",
+            "quantity": 80,
+            "caloriesPer100g": 240,
+            "protein": 8,
+            "carbs": 34,
+            "fats": 6,
+            "qualifier": 0.7
+          },
+          {
+            "ingredient": "paneer(low fat, milky mist)",
+            "quantity": 0,
+            "caloriesPer100g": 204,
+            "protein": 25,
+            "carbs": 5.6,
+            "fats": 9,
+            "qualifier": 0.47
+          }
+        ],
+        "recipe": {
+          "ingredients": [
+            "1 large Onion (finely chopped)",
+            "2 medium Tomatoes (pureed)",
+            "1 tsp Ginger-Garlic Paste",
+            "1 Green Chili (optional)",
+            "½ tsp Turmeric Powder",
+            "1 tsp Red Chili Powder",
+            "½ tsp Garam Masala",
+            "1 tsp Coriander Powder",
+            "½ tsp Cumin Seeds",
+            "½ cup Low-fat Curd/Yogurt",
+            "1 tsp Besan (Gram Flour)",
+            "1 tsp Oil (Olive oil or Ghee)",
+            "Salt to taste",
+            "Handful of Coriander Leaves (for garnish)"
+          ],
+          "instructions": [
+            "Heat 1 tsp oil in a pan and add cumin seeds.",
+            "Add chopped onions and sauté until golden brown.",
+            "Mix in ginger-garlic paste and cook for 30 seconds.",
+            "Add turmeric, red chili powder, coriander powder, and mix well.",
+            "Pour in pureed tomatoes and cook until oil separates (~5 minutes).",
+            "Add besan to thicken the gravy and mix well.",
+            "Reduce heat and stir in low-fat curd slowly to prevent curdling.",
+            "Add paneer cubes, garam masala, and salt. Simmer for 5 minutes.",
+            "Garnish with fresh coriander leaves and serve hot."
+          ]
+        }
       },
-      "millet": {
-        "item": "Millet Roti with Egg Curry",
-        "quantity": {
-          "milletRoti": "2 millet rotis",
-          "eggs": "2",
-          "curry": "150g"
-        },
-        "protein": 20,
-        "carbs": 40,
-        "fats": 9,
-        "calories": 450
+      {
+        "type": "nonVeg",
+        "protein": 1,
+        "name": "Rice And Fail-Proof Pepper Chicken ",
+        "baseQuantity": "150g, 150g",
+        "calories": 375,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 150,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.48
+          },
+          {
+            "ingredient": "Chicken thigh, raw, skinless",
+            "quantity": 150,
+            "caloriesPer100g": 121,
+            "protein": 19.7,
+            "carbs": 0,
+            "fats": 4.1,
+            "qualifier": 0.5
+          }
+        ],
+        "description": "Make sure to add in veggies to improve digestion!!",
+        "recipe": {
+          "ingredients": [
+            "Chicken As Mentioned",
+            "1 tsp Ginger-Garlic Paste",
+            "1 tsp Black Pepper Powder",
+            "½ tsp Cumin Powder",
+            "½ tsp Coriander Powder",
+            "½ tsp Turmeric Powder",
+            "1 tsp Red Chili Powder",
+            "1 tbsp Curd/Yogurt (optional, for tenderness)",
+            "1 tsp Lemon Juice",
+            "1 tbsp Oil (Ghee or Olive Oil)",
+            "Salt to taste",
+            "1 sprig Curry Leaves (optional, for flavor)",
+            "1 Green Chili (slit, optional)",
+            "Handful of Coriander Leaves (for garnish)"
+          ],
+          "instructions": [
+            "Heat 1 tbsp oil in a pan and add curry leaves and green chili.",
+            "Add chicken pieces and sauté for 2 minutes on medium heat.",
+            "Mix in ginger-garlic paste and cook until the raw smell disappears.",
+            "Add turmeric powder, red chili powder, cumin powder, coriander powder, and black pepper powder. Stir well.",
+            "Reduce heat and add curd, mix to coat the chicken evenly.",
+            "Cover and cook for 5-6 minutes, stirring occasionally, until chicken is cooked through.",
+            "Remove the lid, increase heat, and stir-fry for 2 minutes to get a dry texture.",
+            "Add lemon juice and mix well.",
+            "Garnish with fresh coriander leaves and serve hot."
+          ]
+        }
+      },
+      {
+        "type": "veg",
+        "protein": 0,
+        "name": "chapati and mixed veggies salad",
+        "baseQuantity": "80g, 300g",
+        "calories": 324,
+        "ingredients": [
+          {
+            "ingredient": "chapati",
+            "quantity": 80,
+            "caloriesPer100g": 240,
+            "protein": 8,
+            "carbs": 34,
+            "fats": 6,
+            "qualifier": 0.7
+          },
+          {
+            "ingredient": "Mixed Veggies",
+            "quantity": 300,
+            "caloriesPer100g": 41,
+            "protein": 0.9,
+            "carbs": 6.8,
+            "fats": 0.2,
+            "qualifier": 0.3
+          }
+        ],
+        "recipe": ""
+      },
+      {
+        "protein": 0,
+        "type": "veg",
+        "name": "Legendary Meal!!Rice , Sambar And Palya",
+        "baseQuantity": "150g,100g , 100g ",
+        "calories": 366,
+        "ingredients": [
+          {
+            "ingredient": "rice",
+            "quantity": 100,
+            "caloriesPer100g": 130,
+            "protein": 2.4,
+            "carbs": 28.6,
+            "fats": 0.2,
+            "qualifier": 0.53
+          },
+          {
+            "ingredient": "sambar",
+            "quantity": 100,
+            "caloriesPer100g": 46,
+            "protein": 1.7,
+            "carbs": 3.4,
+            "fats": 3,
+            "qualifier": 0.21
+          },
+          {
+            "ingredient": "Palya (Vegetable Stir-Fry)",
+            "quantity": 100,
+            "caloriesPer100g": 95,
+            "protein": 2,
+            "carbs": 8,
+            "fats": 5,
+            "qualifier": 0.26
+          }
+        ],
+        "description": "You can also take normal veggies if you cannot prepare palya. If consuming palya make sure to not add much oil(Avoid veggies mentinoed in the avoid section)"
       }
-    }
+    ],
+    "snacks": [
+      {
+        "type": "veg",
+        "name": "Greek Yougurt and Fruits",
+        "baseQuantity": "100g, 200g",
+        "calories": 215,
+        "ingredients": [
+          {
+            "ingredient": "Greek Yogurt",
+            "quantity": 100,
+            "caloriesPer100g": 77,
+            "protein": 8,
+            "carbs": 6.2,
+            "fats": 2.2,
+            "qualifier": 0.35
+          },
+          {
+            "ingredient": "Mixed Fruits",
+            "quantity": 200,
+            "caloriesPer100g": 69,
+            "protein": 0.7,
+            "carbs": 18.1,
+            "fats": 0.2,
+            "qualifier": 0.65
+          }
+        ]
+      },
+      {
+        "type": "veg",
+        "name": "Apple And Almonds",
+        "baseQuantity": "200g, 15g",
+        "calories": 191,
+        "ingredients": [
+          {
+            "ingredient": "Apple",
+            "quantity": 200,
+            "caloriesPer100g": 52,
+            "protein": 0,
+            "carbs": 11,
+            "fats": 0,
+            "qualifier": 0.6
+          },
+          {
+            "ingredient": "Almonds",
+            "quantity": 15,
+            "caloriesPer100g": 579,
+            "protein": 21,
+            "carbs": 9,
+            "fats": 50,
+            "qualifier": 0.3
+          }
+        ]
+      }
+    ]
   }
 }
