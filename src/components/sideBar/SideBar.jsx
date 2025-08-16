@@ -1,6 +1,12 @@
-import { Grid, LogOut, Settings, Target } from "lucide-react";
+import {
+  Bell,
+  BicepsFlexed,
+  Grid,
+  LogOut,
+  Settings,
+  Target,
+} from "lucide-react";
 import { FaDumbbell } from "react-icons/fa";
-import { GrDocumentDownload } from "react-icons/gr";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const menuItems = [
@@ -14,14 +20,14 @@ const menuItems = [
     index: 1,
     name: "Fitness Program",
     path: "/dashboard/program",
-    icon: <GrDocumentDownload size={18} />,
+    icon: <BicepsFlexed size={18} />,
   },
-  // {
-  //   index: 3,
-  //   name: "Notifications",
-  //   path: "/notifications",
-  //   icon: <Bell size={18} />,
-  // },
+  {
+    index: 3,
+    name: "Meditation",
+    path: "/dashboard/meditation",
+    icon: <Bell size={18} />,
+  },
 ];
 
 const SideBar = () => {
