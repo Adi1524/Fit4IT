@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { FaDumbbell } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +9,7 @@ import stretchesData from "../../data/stretches.json";
 import { setMealPlanRedux } from "../../redux/slice/mealPlanSlice";
 import { setUserDetails } from "../../redux/slice/userDetailsSlice";
 import { setSelectedWorkout } from "../../redux/slice/userWorkoutSlice";
+import { BASE_URL } from "../../utils/constants/constants";
 import UserInfoPage1 from "./userInfo/UserInfoPage1";
 import UserInfoPage2 from "./userInfo/UserInfoPage2";
 import UserInfoPage3 from "./userInfo/UserInfoPage3";
@@ -27,6 +29,7 @@ const UserDetails = () => {
   console.log("userdetailsinlog", userDetails);
   const [calories, setCalories] = useState(null);
   const [mealPlan, setMealPlan] = useState(null);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -80,7 +83,31 @@ const UserDetails = () => {
     generateWorkoutPlan(userDetails);
 
     dispatch(setMealPlanRedux({ ...mealPlanResult }));
-    navigate("/dashboard");
+  };
+
+  const handleSubmit = async () => {
+    calculateCalories();
+
+    try {
+      const res = await axios.post(
+        BASE_URL + "/profile/setup",
+        {
+          gender: userDetails.gender,
+          age: userDetails.age,
+          weight: userDetails.weight,
+          height: userDetails.height,
+          mealPreference: userDetails.mealPreference,
+          activityLevel: userDetails.activity_level,
+          workoutExperience: userDetails.workoutExperience,
+          walking: userDetails.walking,
+        },
+        { withCredentials: true }
+      );
+      console.log("res", res);
+      navigate("/dashboard");
+    } catch (error) {
+      console.log("error in handleSubmit ", error.message);
+    }
   };
 
   const generateWorkoutPlan = (userDetails) => {
@@ -270,6 +297,7 @@ const UserDetails = () => {
 
         {pageNo === 3 && (
           <UserInfoPage3
+            handleSubmit={handleSubmit}
             handleChange={handleChange}
             validateFirstPage={validateFirstPage}
             setPageNo={setPageNo}

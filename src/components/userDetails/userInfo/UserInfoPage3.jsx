@@ -16,10 +16,10 @@ const UserInfoPage3 = ({
   handleChange,
   userDetails,
   setPageNo,
-  calculateCalories,
+
+  handleSubmit,
 }) => {
   const [errors, setErrors] = useState({});
-
   const validateThirdPage = () => {
     const newErrors = {};
 
@@ -34,7 +34,6 @@ const UserInfoPage3 = ({
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   return (
     <div>
       <div className="rounded-3xl shadow-md p-4 w-[40rem] h-[28rem]">
@@ -94,8 +93,8 @@ const UserInfoPage3 = ({
         <button
           type="button"
           onClick={() => {
-            if (validateThirdPage()) {
-              calculateCalories();
+            if (validateThirdPage) {
+              handleSubmit();
             }
           }}
           className="mt-8 w-full bg-[#dfe068] text-white font-bold rounded-full py-2"

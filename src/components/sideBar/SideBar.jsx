@@ -39,17 +39,14 @@ const SideBar = () => {
   };
 
   const handleSettingsClick = () => {
-    // Add your settings navigation logic here
     console.log("Settings clicked");
   };
 
   const handleLogoutClick = () => {
-    // Add your logout logic here
     console.log("Logout clicked");
   };
 
   const handleTrackGoalsClick = () => {
-    // Add your track goals logic here
     console.log("Track Goals clicked");
   };
 

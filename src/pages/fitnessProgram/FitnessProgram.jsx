@@ -1,5 +1,4 @@
 import { useState } from "react";
-import CustomMeditation from "../../components/CustomMeditation/CustomMeditation";
 import FitnessSection from "../../components/fitnessProgram/fitnessSection/FitnessSection";
 import WorkoutDetailSection from "../../components/workoutComponent/workoutDetailSection/WorkoutDetailSection";
 import MealPlanPage from "../MealPlanPage";
@@ -19,7 +18,7 @@ const FitnessProgram = () => {
         {sectionType === "meals" && <MealPlanPage />}
         {sectionType === "workout" && <WorkoutDetailSection />}
         {/* {sectionType === "meditation" && <MeditationPlan />} */}
-        {sectionType === "meditation" && <CustomMeditation />}
+        {/* {sectionType === "meditation" && <CustomMeditation />} */}
       </div>
     </div>
   );
