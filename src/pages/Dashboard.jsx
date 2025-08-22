@@ -2,19 +2,21 @@ import { Progress } from "antd";
 import { Hand } from "lucide-react";
 import { useEffect, useState } from "react";
 import { IoFootstepsOutline } from "react-icons/io5";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import UserProfile from "../components/mainDashboard/userProfile/UserProfile";
+import { fetchUser } from "../redux/slice/userDetailsSlice";
 
 const Dashboard = () => {
   const mealPlan = useSelector((store) => store.mealplan.mealplan);
-  const userDetails = useSelector((store) => store.userDetails);
+  const userDetails = useSelector((store) => store.userDetails?.user);
   const mealsCompleted = useSelector(
     (store) => store.userDetails.mealsCompleted
   );
+  const dispatch = useDispatch();
 
   const workoutPlan = useSelector((store) => store.userWorkout);
 
-  console.log("workoutplan did it get set", workoutPlan);
+  console.log("workoutplan did it get set", userDetails);
 
   const mealCalories = mealPlan?.totalCalories ? mealPlan?.totalCalories : 0;
   const mealMacros = mealPlan?.totalMacros ? mealPlan?.totalMacros : 0;
@@ -40,6 +42,10 @@ const Dashboard = () => {
     }
   }, [userDetails?.mealsCompleted]);
 
+  useEffect(() => {
+    dispatch(fetchUser());
+  }, [dispatch]);
+
   return (
     <div className="h-screen bg-[#ededed] flex ">
       <div className="bg-white w-[70%] h-screen overflow-y-auto hide-scrollbar pr-4 ml-[2px] pt-4 pl-2">
@@ -49,7 +55,9 @@ const Dashboard = () => {
             <Hand color="white" />
           </div>
           <div>
-            <p className="mb-4 text-xl font-bold ">Hello, User!</p>
+            <p className="mb-4 text-xl font-bold ">
+              Hello, {userDetails?.name}!
+            </p>
             <p className=" w-[25rem] text-xs">
               Toady is {dayName}, {monthName} {day} . You have 2 workouts
               planned, your next meal includes idli, you need to drink more
@@ -241,7 +249,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <UserProfile />
+      <UserProfile userDetails={userDetails} />
 
       {/* <Modal
         open={isModalOpen}

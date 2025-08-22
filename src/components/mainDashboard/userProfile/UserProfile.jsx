@@ -3,10 +3,9 @@ import { IoIosNotifications } from "react-icons/io";
 import { PiFlowerLotus } from "react-icons/pi";
 import { useSelector } from "react-redux";
 
-const UserProfile = () => {
+const UserProfile = ({ userDetails }) => {
   const mealPlan = useSelector((store) => store.mealplan.mealplan);
-  const userDetails = useSelector((store) => store.userDetails);
-  console.log("user-detaisl", userDetails);
+
   return (
     <div className="bg-white flex-1 ml-[3px] pl-2 pt-4 pr-4">
       <div className="w-full flex justify-end gap-2">
@@ -20,7 +19,7 @@ const UserProfile = () => {
           <p className="text-white font-bold text-4xl">A</p>
         </div>
 
-        <p className="text-xl font-semibold">User Profile</p>
+        <p className="text-xl font-semibold">{userDetails.name}</p>
         <p className="text-xs text-gray-500">
           Age {userDetails?.age}, Fitness Enthusiat
         </p>

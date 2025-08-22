@@ -2,7 +2,7 @@ import { Checkbox } from "antd";
 import axios from "axios";
 import { Contact, Key, Lock, Mail, UserIcon } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../utils/constants/constants";
 import InputFieldIcon from "../globalComponents/InputFieldIcon";
 
@@ -113,9 +113,12 @@ const Signup = () => {
           Sign up
         </button>
 
-        <p className="text-xs mt-3 text-center ml-3 text-gray-500">
+        <Link
+          to="/login"
+          className="text-xs mt-3 text-center ml-3 text-gray-500"
+        >
           Already have an account? <span className="font-bold">Log in </span>
-        </p>
+        </Link>
       </div>
     </div>
   );

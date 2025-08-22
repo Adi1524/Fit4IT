@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import CustomMeditation from "../components/CustomMeditation/CustomMeditation";
+import Login from "../components/Login/Login";
 import MeditationTrack from "../components/MeditationTrack";
 import RecipeCard from "../components/RecipeCard";
+import ProtectedRoute from "../components/protectedRoute/ProtectedRoute";
 import WorkoutDetailSection from "../components/workoutComponent/workoutDetailSection/WorkoutDetailSection";
 import Dashboard from "../pages/Dashboard";
 import HomePage from "../pages/HomePage";
@@ -15,41 +17,76 @@ import FitnessProgram from "../pages/fitnessProgram/FitnessProgram";
 
 const appRouter = createBrowserRouter([
   {
+    path: "/signup",
+    element: <SignupPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
     path: "/",
-    element: <HomePage />,
-    // errorElement: <Error />,
+    element: (
+      <ProtectedRoute>
+        <HomePage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/workout",
-    element: <WorkoutPage />,
+    element: (
+      <ProtectedRoute>
+        <WorkoutPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/workout-detail",
-    element: <WorkoutDetailSection />,
+    element: (
+      <ProtectedRoute>
+        <WorkoutDetailSection />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/meal-form",
-    element: <MealFormPage />,
+    element: (
+      <ProtectedRoute>
+        <MealFormPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/meal-plan",
-    element: <MealPlanPage />,
+    element: (
+      <ProtectedRoute>
+        <MealPlanPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/recipe-description",
-    element: <RecipeCard />,
+    element: (
+      <ProtectedRoute>
+        <RecipeCard />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/meditation",
-    element: <MeditationPage />,
+    element: (
+      <ProtectedRoute>
+        <MeditationPage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/meditation-detail/:id",
-    element: <MeditationTrack />,
-  },
-  {
-    path: "/signup",
-    element: <SignupPage />,
+    element: (
+      <ProtectedRoute>
+        <MeditationTrack />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/dashboard",
