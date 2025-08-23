@@ -50,11 +50,7 @@ const appRouter = createBrowserRouter([
   },
   {
     path: "/meal-form",
-    element: (
-      <ProtectedRoute>
-        <MealFormPage />
-      </ProtectedRoute>
-    ),
+    element: <MealFormPage />,
   },
   {
     path: "/meal-plan",

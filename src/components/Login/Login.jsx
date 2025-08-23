@@ -3,6 +3,7 @@ import IdliImg from "../../assets/IdliLogo.jpg";
 
 import axios from "axios";
 import { useState } from "react";
+import { FaGoogle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setUserDetails } from "../../redux/slice/userDetailsSlice";
@@ -83,6 +84,17 @@ const Login = () => {
             >
               Login
             </button>
+
+            <div className="flex justify-center space-x-2 mt-4">
+              <p className="text-xs font-bold text-black/60 mt-2 text-center ">
+                Continue with google
+              </p>
+              <div className="flex items-center justify-center mt-1 ">
+                <div className="w-5 h-5 flex items-center justify-center rounded-full bg-black ">
+                  <FaGoogle color="white" size={10} />
+                </div>
+              </div>
+            </div>
 
             <p className="text-xs mt-3 text-center ml-3 text-gray-500">
               Don't have an account?{" "}
